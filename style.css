@@ -1,0 +1,30 @@
+/* imagen de fondo al inicio de la pagina */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#back-image {
+  background: url("img/programming2.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 45vh;
+}
+#hv {
+  width: 90vw;
+  height: 100vh;
+  margin: -20vh auto 0px auto;
+  background: white;
+}
+/* clases generales */
+.hgroup {
+  text-align: center;
+}
+/* header */
+header h1 {
+  color: #222222;
+}
+header h3 {
+  color: #555555;
+}
