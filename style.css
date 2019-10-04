@@ -1,20 +1,26 @@
+/* 
+https://codepen.io/melnik909/pen/qPjwvq
+ */
+
 /* imagen de fondo al inicio de la pagina */
 
+/* importamos la fuente Monserrat desde google fonts */
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 #back-image {
-  background: url("img/programming2.jpg") no-repeat center center/cover;
+  background: url("img/2.jpg") no-repeat center center/cover;
   width: 100%;
   height: 45vh;
 }
 #hv {
   padding: 20px;
   width: 90vw;
-  height: 100vh;
   margin: -20vh auto 0px auto;
   background: white;
 }
@@ -49,7 +55,7 @@ header h3 {
 #basic {
   display: flex;
   margin-top: 30px;
-  width: 90%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -57,10 +63,16 @@ header h3 {
   padding: 15px;
   flex: 1;
 }
+#datos h2 {
+  margin-bottom: 8px;
+}
 
 .dato {
   display: flex;
   justify-content: space-between;
+}
+.label {
+  font-weight: bold;
 }
 .val {
   margin-right: 10vh;
@@ -74,5 +86,45 @@ header h3 {
 
 /* cuando se posiciona el mouse sobre la imagen se realiza un pequeño efecto con mas sombra */
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 25, 0.5);
+}
+
+/* seccion de lenguajes conocidos */
+#languages img {
+  width: 180px;
+  border-radius: 50%;
+}
+
+.language {
+  display: flex;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.language .language-image {
+  flex: 1;
+  z-index: 2;
+}
+
+.language .language-description {
+  height: 80%;
+  flex: 4;
+  background: #2196f3;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+}
+
+.language .language-description::before {
+  content: "";
+  background: #2196f3;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 200px;
+  height: 10px;
+  margin-left: -150px;
+  z-index: 0;
 }
