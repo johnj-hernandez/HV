@@ -91,7 +91,7 @@ header h3 {
 
 /* seccion de lenguajes conocidos */
 #languages img {
-  width: 180px;
+  width: 100%;
   border-radius: 50%;
 }
 
@@ -104,17 +104,21 @@ header h3 {
 .language .language-image {
   flex: 1;
   z-index: 2;
+  background: white;
+  margin-right: 20px;
 }
 
 .language .language-description {
   height: 80%;
-  flex: 4;
+  flex: 6;
   background: #2196f3;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-radius: 20px;
   padding: 20px;
   position: relative;
+
+  z-index: 1;
 }
 
 .language .language-description::before {
@@ -126,5 +130,5 @@ header h3 {
   width: 200px;
   height: 10px;
   margin-left: -150px;
-  z-index: 0;
+  z-index: -1;
 }
