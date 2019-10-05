@@ -13,6 +13,10 @@ https://codepen.io/melnik909/pen/qPjwvq
   font-family: "Montserrat", sans-serif;
 }
 
+:root {
+  --main-color: #1565c0;
+}
+
 #back-image {
   background: url("img/2.jpg") no-repeat center center/cover;
   width: 100%;
@@ -21,7 +25,7 @@ https://codepen.io/melnik909/pen/qPjwvq
 #hv {
   padding: 20px;
   width: 90vw;
-  margin: -20vh auto 0px auto;
+  margin: -20vh auto 20px auto;
   background: white;
 }
 /* clases generales */
@@ -33,7 +37,7 @@ https://codepen.io/melnik909/pen/qPjwvq
 header {
   text-align: center;
   padding: 20px;
-  background: #2196f3;
+  background: var(--main-color);
 }
 header h1 {
   color: white;
@@ -48,8 +52,12 @@ header h3 {
 }
 
 /* Basic section */
+
+#about p {
+  text-align: justify;
+}
 #basic h2 {
-  color: #2196f3;
+  color: var(--main-color);
 }
 
 #basic {
@@ -90,6 +98,12 @@ header h3 {
 }
 
 /* seccion de lenguajes conocidos */
+
+#languages h1 {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--main-color);
+}
 #languages img {
   width: 80%;
   border-radius: 50%;
@@ -113,7 +127,7 @@ header h3 {
 .language .language-description {
   height: 70%;
   flex: 6;
-  background: #2196f3;
+  background: var(--main-color);
   color: white;
   font-size: 1rem;
   border-radius: 20px;
@@ -125,7 +139,7 @@ header h3 {
 
 .language .language-description::before {
   content: "";
-  background: #2196f3;
+  background: var(--main-color);
   position: absolute;
   top: 50%;
   left: 0;
