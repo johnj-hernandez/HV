@@ -69,7 +69,7 @@ header h3 {
 /* imagen circular */
 #profile {
   border-radius: 50%;
-  width: 15%;
+  width: 18%;
 }
 
 /* agregamos las redes con un contendor flexbox para posicionarlas  como filas y luego le damos tamaño a cada una con una clase para afectarlas a todas */
@@ -100,10 +100,12 @@ header h3 {
 }
 #basic h2 {
   color: var(--main-color);
+  text-align: center;
 }
 /* alineamos horizontalmente el bloque de acerca de mi y el de datos basico mas otras propiedades de margen y padding */
 #basic {
   display: flex;
+  flex-wrap: wrap;
   margin-top: 30px;
   width: 80%;
   margin-left: auto;
@@ -113,6 +115,20 @@ header h3 {
 #basic > div {
   padding: 15px;
   flex: 1;
+}
+/* para pantallas mas pequeñas la informacion personal y los datos estaran uno debajo de otro */
+@media screen and (max-width: 992px) {
+  #basic > div {
+    flex: 100%;
+  }
+
+  #datos {
+    overflow: auto;
+  }
+
+  #profile {
+    width: 45%;
+  }
 }
 
 #datos h2 {
@@ -128,6 +144,8 @@ header h3 {
 }
 .val {
   margin-right: 10vh;
+
+  margin-left: 10px;
 }
 
 /* seccion de lenguajes conocidos */
@@ -202,7 +220,7 @@ section > h1 {
 
 .project-text {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -220,4 +238,12 @@ section > h1 {
   width: 100%;
   height: 0;
   transition: 0.5s ease;
+}
+#grid-projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+
+  justify-content: space-evenly;
+  justify-items: center;
 }
