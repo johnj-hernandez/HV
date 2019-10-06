@@ -36,7 +36,7 @@ https://codepen.io/melnik909/pen/qPjwvq
   box-shadow: 0 8px 16px 0 rgba(0, 0, 25, 0.5);
 }
 
-/* agregaremos una imagen de fondo. detras de la hoja de vida para darle mayor personalizacion a la hoja de vida, ocupara todo el ancho y la altura sera de aproximadamente 45% el largo del dispositivo */
+/* agregaremos una imagen de fondo. detras de la hoja de vida para darle mayor personalizacion a la hoja de vida, ocupara todo el ancho y la altura sera de aproximadamente 45% el largo del dispositivo y cubrira todo el ancho */
 
 #back-image {
   background: url("img/2.jpg") no-repeat center center/cover;
@@ -159,7 +159,7 @@ section > h1 {
   width: 80%;
   border-radius: 50%;
 }
-
+/* los componentes de cada lenguaje (icono y descripcion) irian en fila */
 .language {
   display: flex;
   margin-top: 1.5rem;
@@ -174,7 +174,8 @@ section > h1 {
   margin-right: 20px;
   text-align: end;
 }
-
+/* a la descripcion le daremos 6 unidades de espacio de la fila y a la imagen solo 1 flex para tener suficiente espacio para el texto
+le damos un  Z index para que vayan tanto la imagen como la descripcion por encima de la linea separadora creada con el selector Before */
 .language .language-description {
   height: 70%;
   flex: 6;
@@ -187,7 +188,7 @@ section > h1 {
 
   z-index: 1;
 }
-
+/* usaremos el selector before para crear una linea que coencte la descripcion con el icono de cada lenguaje de programacion por eso se hace relativa la posicion de la descripcion, para que dicha linea tenga posicion absoluta se le pondra en la mitad de la descripcion por eso el top50% se le define su ancho y largo y un margen left para sacarlo de detras de la descripcion  por la izquierda y se conecte con el titulo */
 .language .language-description::before {
   content: "";
   background: var(--main-color);
@@ -239,11 +240,11 @@ section > h1 {
   height: 0;
   transition: 0.5s ease;
 }
+/* haremos el contenedor de los projectos un grid container, de manera que podamos organizar las imagenes en forma de cuadriula , dejaremos que  se defina la cantidad de projectos por filas automaticamente pero que inicialmente sean 3 en pantallas grandes, se le pone un un grid gap para agregarle  la separacion entre filas y columnas */
 #grid-projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 15px;
-
   justify-content: space-evenly;
   justify-items: center;
 }
