@@ -52,24 +52,17 @@ https://codepen.io/melnik909/pen/qPjwvq
 }
 
 /* -----------------header-------------------- */
-/* el header constara principalmente de la imagen y la informacion basica de mi persona */
+/* el header constara principalmente de la imagen y la informacion basica de mi persona, usaremos las flechas para establecer el flujo de lectura del encabezado */
 /* a continuacion se le dan algunas propiedades basicas al encabezado y titulo */
 header {
   text-align: center;
-  padding: 20px;
   background: var(--main-color);
+  align-items: center;
 }
-header h1 {
+header h1,
+h2,
+h3 {
   color: white;
-}
-header h3 {
-  color: white;
-}
-
-/* imagen circular */
-#profile {
-  border-radius: 50%;
-  width: 18%;
 }
 
 /* agregamos las redes con un contendor flexbox para posicionarlas  como filas y luego le damos tamaño a cada una con una clase para afectarlas a todas */
@@ -91,6 +84,32 @@ header h3 {
 
 #redes div:nth-child(1) {
   margin-left: 0;
+}
+/* correcion del header, algo mas llamativo y diciente */
+header {
+  display: flex;
+  padding: 20px;
+}
+/* tamaño y color de las flechas */
+#arrows i {
+  font-size: 15vw;
+  color: white;
+  margin-left: 10px;
+}
+/* y usamos los porcentajes en la propiedad flex para asignar la distribucion */
+#arrows {
+  flex: 40%;
+}
+#imagen-perfil {
+  background-image: url("img/profile3.jpg");
+  background-position: center;
+  background-size: contain;
+  height: 210px;
+  flex: 25%;
+}
+
+.hgroup {
+  flex: 35%;
 }
 
 /* ----------------Basic section -----------------------------*/
