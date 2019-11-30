@@ -4,22 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- importamos el codigo de iconos externo -->
-    <script
-      src="https://kit.fontawesome.com/982d45a909.js"
-      crossorigin="anonymous"
-    ></script>
-
-
     <link rel="stylesheet" href="backGround.css" />
+    <!--Importamos las hojas de estilo usadas para el background, typografia y la principal de la pagina -->
     <link rel="stylesheet" href="typo.css" />
-
     <link rel="stylesheet" href="style.css" />
-
     <title>John Hernandez</title>
   </head>
 
   <body>
+    <!-- la seccion background-section sera la seccion con el fondo animado, por lo que la tipografia y refes van dentro de ella, en la parte delantera. Para realizar la animacion del fondo se utilizan varios Spans para los cuadros, que iran aumentando su tamaño, rotando y desplazandose hacia arriba para animar el fondo. -->
     <section class="background-section">
       <div class="bgPulse">
         <span></span>
@@ -33,19 +26,23 @@
         <span></span>
         <span></span>
       </div>
-
+      <!-- Creamos un Div con la typografia, la foto de perfil y las redes -->
       <div id="typo">
         <div id="profileRedes">
           <img src="img/profile3.jpg" alt="" id="profile" />
           <!-- algunas redes sociales en una misma fila -->
           <div id="redes">
-            <div class="red">
-              <a href=""><img src="./img/icons/facebook.png" alt=""/></a>
+            <div class="red scale-animation">
+              <a href="https://www.facebook.com/johnhz14" target="_blank"
+                ><img src="./img/icons/facebook.png" alt=""
+              /></a>
             </div>
-            <div class="red">
-              <a href=""><img src="./img/icons/whatsapp.png" alt=""/></a>
+            <div class="red scale-animation">
+              <a href="https://wa.me/573105485956" target="_blank"
+                ><img src="./img/icons/whatsapp.png" alt=""
+              /></a>
             </div>
-            <div class="red">
+            <div class="red scale-animation">
               <a href=""><img src="./img/icons/instagram.png" alt=""/></a>
             </div>
           </div>
@@ -61,10 +58,7 @@
     </section>
     <!-- la hoja de vida estara dentro de un div con id hv, y con efectos de una carta -->
     <div id="hv" class="card">
-      <!-- Header con una imagen. nombre y carrera -->
-      <div></div>
       <hr />
-
 
       <!-- dos bloques de informacion basica con su titulo y elementos de descripcion -->
       <div id="basic" class="card">
@@ -114,7 +108,7 @@
         <!-- usaremos clases para definir solo una vez los estilos de todos los lenguajes -->
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/cpp.png" alt="cpp" class="request-loader" />
+            <img src="img/icons/cpp.png" alt="cpp" class="scale-animation" />
           </div>
           <div class="language-description">
             <p>
@@ -127,7 +121,7 @@
 
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/java.png" alt="java" />
+            <img src="img/icons/java.png" alt="java" class="scale-animation" />
           </div>
           <div class="language-description">
             <p>
@@ -139,7 +133,11 @@
         </div>
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/python.png" alt="python" />
+            <img
+              src="img/icons/python.png"
+              alt="python"
+              class="scale-animation"
+            />
           </div>
           <div class="language-description">
             <p>
@@ -154,7 +152,7 @@
 
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/r.png" alt="R" />
+            <img src="img/icons/r.png" alt="R" class="scale-animation" />
           </div>
           <div class="language-description">
             <p>
@@ -170,7 +168,11 @@
 
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/flutter.png" alt="flutter" />
+            <img
+              src="img/icons/flutter.png"
+              alt="flutter"
+              class="scale-animation"
+            />
           </div>
           <div class="language-description">
             <p>
@@ -186,7 +188,11 @@
 
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/javascript.png" alt="js" />
+            <img
+              src="img/icons/javascript.png"
+              alt="js"
+              class="scale-animation"
+            />
           </div>
           <div class="language-description">
             <p>

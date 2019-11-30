@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* El fondo animado consiste en una seccion con fondo cambiante que contiene Spans de un tamaño determinado, forma cuadrada, a los cuales se les asocia una animacion de aumento en su escala, rotacion y translacion hacia arriba, que se repite inifitamente */
 
 .background-section {
   position: relative;

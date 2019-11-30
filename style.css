@@ -34,7 +34,6 @@ https://codepen.io/melnik909/pen/qPjwvq
 /* cuando se posiciona el mouse sobre la imagen se realiza un pequeño efecto con mas sombra */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 25, 0.5);
-
 }
 
 #profile {
@@ -52,23 +51,8 @@ https://codepen.io/melnik909/pen/qPjwvq
   z-index: 2;
 }
 
-/* -----------------header-------------------- */
-/* el header constara principalmente de la imagen y la informacion basica de mi persona, usaremos las flechas para establecer el flujo de lectura del encabezado */
-/* a continuacion se le dan algunas propiedades basicas al encabezado y titulo */
-header {
-  text-align: center;
-  background: var(--main-color);
-  align-items: center;
-}
-header h1,
-h2,
-h3 {
-  color: white;
-}
-
 #profileRedes {
   margin-right: 20px;
-
   animation: animateNames 4s;
 }
 
@@ -80,7 +64,6 @@ h3 {
   justify-content: center;
 }
 
-
 #redes img {
   width: 100%;
 }
@@ -88,27 +71,12 @@ h3 {
 .red {
   width: 40px;
   margin-left: 25px;
-
 }
 
 #redes div:nth-child(1) {
   margin-left: 0;
 }
-/* correcion del header, algo mas llamativo y diciente */
-header {
-  display: flex;
-  padding: 20px;
-}
-/* tamaño y color de las flechas */
-#arrows i {
-  font-size: 15vw;
-  color: white;
-  margin-left: 10px;
-}
-/* y usamos los porcentajes en la propiedad flex para asignar la distribucion */
-#arrows {
-  flex: 40%;
-}
+
 #imagen-perfil {
   background-image: url("img/profile3.jpg");
   background-position: center;
@@ -120,7 +88,6 @@ header {
 .hgroup {
   flex: 35%;
 }
-
 
 /* ----------------Basic section -----------------------------*/
 /* texto de descripcion justificado */
@@ -276,4 +243,32 @@ le damos un  Z index para que vayan tanto la imagen como la descripcion por enci
   grid-gap: 15px;
   justify-content: space-evenly;
   justify-items: center;
+}
+
+/* Animaciones pequeñas a utilizar por ejemplo en los iconos de redes sociales */
+
+.scale-animation:hover {
+  animation: scale 0.3s forwards;
+}
+
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.language-description:hover {
+  animation: scale2 0.4s forwards;
+}
+
+@keyframes scale2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.02);
+  }
 }
