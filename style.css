@@ -34,12 +34,14 @@ https://codepen.io/melnik909/pen/qPjwvq
 /* cuando se posiciona el mouse sobre la imagen se realiza un pequeño efecto con mas sombra */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 25, 0.5);
+
 }
 
 #profile {
   border-radius: 50%;
   width: 25vh;
 }
+
 /* algunos paddings y margenes para posicionar la hoja de vida en el centro */
 #hv {
   position: relative;
@@ -78,6 +80,7 @@ h3 {
   justify-content: center;
 }
 
+
 #redes img {
   width: 100%;
 }
@@ -85,6 +88,7 @@ h3 {
 .red {
   width: 40px;
   margin-left: 25px;
+
 }
 
 #redes div:nth-child(1) {
@@ -116,6 +120,7 @@ header {
 .hgroup {
   flex: 35%;
 }
+
 
 /* ----------------Basic section -----------------------------*/
 /* texto de descripcion justificado */
