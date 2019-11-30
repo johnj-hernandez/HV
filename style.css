@@ -6,85 +6,24 @@ https://codepen.io/melnik909/pen/qPjwvq
 
 /* importamos la fuente Monserrat desde google fonts */
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+/* agregamos un pequeño reset y la fuente principal de todo el html que en este caso va a ser Monserrat */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
 }
-
+/* para poder cambiar el color facilmente , se creara una variable css llamada main-color */
 :root {
   --main-color: #1565c0;
 }
 
-#back-image {
-  background: url("img/2.jpg") no-repeat center center/cover;
-  width: 100%;
-  height: 45vh;
-}
-#hv {
-  padding: 20px;
-  width: 90vw;
-  margin: -20vh auto 20px auto;
-  background: white;
-}
 /* clases generales */
 .hgroup {
   text-align: center;
 }
-/* header */
 
-header {
-  text-align: center;
-  padding: 20px;
-  background: var(--main-color);
-}
-header h1 {
-  color: white;
-}
-header h3 {
-  color: white;
-}
-
-#profile {
-  border-radius: 50%;
-  width: 15%;
-}
-
-/* Basic section */
-
-#about p {
-  text-align: justify;
-}
-#basic h2 {
-  color: var(--main-color);
-}
-
-#basic {
-  display: flex;
-  margin-top: 30px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-}
-#basic > div {
-  padding: 15px;
-  flex: 1;
-}
-#datos h2 {
-  margin-bottom: 8px;
-}
-
-.dato {
-  display: flex;
-  justify-content: space-between;
-}
-.label {
-  font-weight: bold;
-}
-.val {
-  margin-right: 10vh;
-}
 .card {
   /* sombras para el efecto de carta */
   padding: 1rem;
@@ -97,9 +36,145 @@ header h3 {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 25, 0.5);
 }
 
-/* seccion de lenguajes conocidos */
+#profile {
+  border-radius: 50%;
+  width: 25vh;
+}
+/* algunos paddings y margenes para posicionar la hoja de vida en el centro */
+#hv {
+  position: relative;
+  padding: 20px;
+  width: 90vw;
+  margin: 5vh auto 20px auto;
+  background: white;
+  z-index: 2;
+}
 
-#languages h1 {
+/* -----------------header-------------------- */
+/* el header constara principalmente de la imagen y la informacion basica de mi persona, usaremos las flechas para establecer el flujo de lectura del encabezado */
+/* a continuacion se le dan algunas propiedades basicas al encabezado y titulo */
+header {
+  text-align: center;
+  background: var(--main-color);
+  align-items: center;
+}
+header h1,
+h2,
+h3 {
+  color: white;
+}
+
+#profileRedes {
+  margin-right: 20px;
+
+  animation: animateNames 4s;
+}
+
+/* agregamos las redes con un contendor flexbox para posicionarlas  como filas y luego le damos tamaño a cada una con una clase para afectarlas a todas */
+
+#redes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#redes img {
+  width: 100%;
+}
+/* le agregamos un margen a la izquierda para separarlos a excepcion del primero(practicando el nth child) */
+.red {
+  width: 40px;
+  margin-left: 25px;
+}
+
+#redes div:nth-child(1) {
+  margin-left: 0;
+}
+/* correcion del header, algo mas llamativo y diciente */
+header {
+  display: flex;
+  padding: 20px;
+}
+/* tamaño y color de las flechas */
+#arrows i {
+  font-size: 15vw;
+  color: white;
+  margin-left: 10px;
+}
+/* y usamos los porcentajes en la propiedad flex para asignar la distribucion */
+#arrows {
+  flex: 40%;
+}
+#imagen-perfil {
+  background-image: url("img/profile3.jpg");
+  background-position: center;
+  background-size: contain;
+  height: 210px;
+  flex: 25%;
+}
+
+.hgroup {
+  flex: 35%;
+}
+
+/* ----------------Basic section -----------------------------*/
+/* texto de descripcion justificado */
+#about p {
+  text-align: justify;
+}
+#basic h2 {
+  color: var(--main-color);
+  text-align: center;
+}
+/* alineamos horizontalmente el bloque de acerca de mi y el de datos basico mas otras propiedades de margen y padding */
+#basic {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* bloques del mismo tamaño */
+#basic > div {
+  padding: 15px;
+  flex: 1;
+}
+/* para pantallas mas pequeñas la informacion personal y los datos estaran uno debajo de otro */
+@media screen and (max-width: 992px) {
+  #basic > div {
+    flex: 100%;
+  }
+
+  #datos {
+    overflow: auto;
+  }
+
+  #profile {
+    width: 45%;
+  }
+}
+
+#datos h2 {
+  margin-bottom: 8px;
+}
+/* para cada dato personas se posicionaran los items en una fila y el espacio en tre ellos */
+.dato {
+  display: flex;
+  justify-content: space-between;
+}
+.label {
+  font-weight: bold;
+}
+.val {
+  margin-right: 10vh;
+
+  margin-left: 10px;
+}
+
+/* seccion de lenguajes conocidos */
+/* crearemos ademas del estilo basico de la seccion, unas clases de manera que el estilo pueda ser utilizado para cada lenguaje a utilizar y solo se necesite cambiar el color y la descripcion propia de cada lenguaje escrito */
+section > h1 {
   margin-top: 20px;
   text-align: center;
   color: var(--main-color);
@@ -108,7 +183,7 @@ header h3 {
   width: 80%;
   border-radius: 50%;
 }
-
+/* los componentes de cada lenguaje (icono y descripcion) irian en fila */
 .language {
   display: flex;
   margin-top: 1.5rem;
@@ -123,7 +198,8 @@ header h3 {
   margin-right: 20px;
   text-align: end;
 }
-
+/* a la descripcion le daremos 6 unidades de espacio de la fila y a la imagen solo 1 flex para tener suficiente espacio para el texto
+le damos un  Z index para que vayan tanto la imagen como la descripcion por encima de la linea separadora creada con el selector Before */
 .language .language-description {
   height: 70%;
   flex: 6;
@@ -136,7 +212,7 @@ header h3 {
 
   z-index: 1;
 }
-
+/* usaremos el selector before para crear una linea que coencte la descripcion con el icono de cada lenguaje de programacion por eso se hace relativa la posicion de la descripcion, para que dicha linea tenga posicion absoluta se le pondra en la mitad de la descripcion por eso el top50% se le define su ancho y largo y un margen left para sacarlo de detras de la descripcion  por la izquierda y se conecte con el titulo */
 .language .language-description::before {
   content: "";
   background: var(--main-color);
@@ -147,4 +223,52 @@ header h3 {
   height: 10px;
   margin-left: -50px;
   z-index: -1;
+}
+
+/*--------- projects section-------- */
+
+.project-container {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  border: 1px dotted var(--main-color);
+}
+
+.project-container:hover .overlay {
+  height: 100%;
+}
+
+.project-container img {
+  height: 100%;
+  width: 100%;
+}
+
+.project-text {
+  color: white;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--main-color);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: 0.5s ease;
+}
+/* haremos el contenedor de los projectos un grid container, de manera que podamos organizar las imagenes en forma de cuadriula , dejaremos que  se defina la cantidad de projectos por filas automaticamente pero que inicialmente sean 3 en pantallas grandes, se le pone un un grid gap para agregarle  la separacion entre filas y columnas */
+#grid-projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 15px;
+  justify-content: space-evenly;
+  justify-items: center;
 }

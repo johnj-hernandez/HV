@@ -4,21 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- importamos el codigo de iconos externo -->
+    <script
+      src="https://kit.fontawesome.com/982d45a909.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="backGround.css" />
+    <link rel="stylesheet" href="typo.css" />
     <link rel="stylesheet" href="style.css" />
+
     <title>John Hernandez</title>
   </head>
 
   <body>
-    <div id="back-image"></div>
-    <div id="hv" class="card">
-      <header>
-        <img src="img/profile3.jpg" alt="profile" id="profile" />
-        <div class="hgroup">
-          <h1>John Javier Hernandez Araujo</h1>
-          <h3>Ingeniero de Sistemas e Industrial</h3>
-        </div>
-      </header>
+    <!-- agregamos una imagen de fondo -->
+    <section class="background-section">
+      <div class="bgPulse">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
+      <div id="typo">
+        <div id="profileRedes">
+          <img src="img/profile3.jpg" alt="" id="profile" />
+          <!-- algunas redes sociales en una misma fila -->
+          <div id="redes">
+            <div class="red">
+              <a href=""><img src="./img/icons/facebook.png" alt=""/></a>
+            </div>
+            <div class="red">
+              <a href=""><img src="./img/icons/whatsapp.png" alt=""/></a>
+            </div>
+            <div class="red">
+              <a href=""><img src="./img/icons/instagram.png" alt=""/></a>
+            </div>
+          </div>
+        </div>
+        <div id="j">
+          <p>J</p>
+        </div>
+        <div id="names">
+          <p>OHN</p>
+          <p>AVIER</p>
+        </div>
+      </div>
+    </section>
+    <!-- la hoja de vida estara dentro de un div con id hv, y con efectos de una carta -->
+    <div id="hv" class="card">
+      <!-- Header con una imagen. nombre y carrera -->
+      <div></div>
+      <hr />
+
+      <!-- dos bloques de informacion basica con su titulo y elementos de descripcion -->
       <div id="basic" class="card">
         <div id="about">
           <h2>ACERCA DE MI</h2>
@@ -60,10 +106,13 @@
       <!-- fin de las secciones anteriores -->
       <!-- a cotninuacion la seccion de los lenguajes de programacion conocidos -->
       <section id="languages">
+        <!-- titulo de la seccion -->
         <h1>LENGUAJES DE PROGRAMACION</h1>
+        <!-- Cada lenguaje contara con un div que contiene la imagen y otro con la descripcion, los lenguajes seran mostrados como un circulo con la imagen del lenguaje unidos con la descripcion con una linea -->
+        <!-- usaremos clases para definir solo una vez los estilos de todos los lenguajes -->
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/cpp.png" alt="cpp" />
+            <img src="img/icons/cpp.png" alt="cpp" class="request-loader" />
           </div>
           <div class="language-description">
             <p>
@@ -109,7 +158,7 @@
             <p>
               R. Cuarto lenguaje de programación que use de manera extensiva por
               varios meses, tuve la oportunidad de conocerlo en la materia de
-              ciencia de los datos, pude ver su utilidad y usp para el análisis
+              ciencia de los datos, pude ver su utilidad y uso para el análisis
               de datos, herramientas de graficacion , estructuras de datos,
               manejo de datos con dplyr y librerias de machine learning como
               Caret.
@@ -144,6 +193,101 @@
               Javascript para el manejo de la logica e interactividad de la
               pagina.
             </p>
+          </div>
+        </div>
+      </section>
+      <!-- seccion de projectos para mostrar los projectos o trabajos realizados
+se utilizaran div que tienen una imagen que representa el projecto y cuando el link se posiciona sobre estas , aparecera el nombre del projecto como una slide -->
+      <section id="projects">
+        <h1>PROYECTOS</h1>
+        <!-- utilzaremos css grid para manejar mejor la forma en la que se distribuyen las imagenes como cuadrillas -->
+        <div id="grid-projects-container">
+          <div class="project-container">
+            <img src="img/projects/newsletter.png" alt="newsletter" />
+
+            <a
+              href="https://johnj-hernandez.github.io/NewsLetter/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="overlay">
+                <div class="project-text">
+                  Colombina:Html and CSS Newsletter
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-container">
+            <img src="img/projects/landing-page.png" alt="landing" />
+
+            <a
+              href="https://johnj-hernandez.github.io/SpoForce_Shoes-LandingPage/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="overlay">
+                <div class="project-text">SpoForce Shoes:Landing Page</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="project-container">
+            <img src="img/projects/ant-colony.png" alt="ant Colony" />
+
+            <a
+              href="https://github.com/johnj-hernandez/Ant-Colony-Optimization"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div class="overlay">
+                <div class="project-text">
+                  Busqueda de ruta optima atraves del algoritmo de optimizacion
+                  por colonia de hormigas
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-container">
+            <img src="img/projects/human-index.jpg" alt="human-index" />
+            <a
+              href="https://github.com/johnj-hernandez/HumanFreedomIndexAnalysis"
+              target="_blank"
+            >
+              <div class="overlay">
+                <div class="project-text">
+                  Human freedom Index a data analysis using python
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-container">
+            <img src="img/projects/mombook.jpg" alt="mombook" />
+            <a
+              href="https://github.com/johnj-hernandez/mombooks"
+              target="_blank"
+            >
+              <div class="overlay">
+                <div class="project-text">
+                  Mombooks, Aplicacion de notas para madres embarazadas,
+                  utilizando FLUTTER y FIREBASE
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="project-container">
+            <img src="img/projects/tip.jpg" alt="landing" />
+            <div class="overlay">
+              <a
+                href="https://johnj-hernandez.github.io/Tip_Calculator/"
+                target="_blank"
+              >
+                <div class="project-text">
+                  Una calculadora pequeña para calcular la propina a pagar,
+                  usado para practicar JavaScript DOM Manipulation
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </section>
