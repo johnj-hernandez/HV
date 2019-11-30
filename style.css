@@ -38,7 +38,7 @@ https://codepen.io/melnik909/pen/qPjwvq
 
 #profile {
   border-radius: 50%;
-  width: 25vh;
+  width: 12vw;
 }
 
 /* algunos paddings y margenes para posicionar la hoja de vida en el centro */
@@ -92,7 +92,7 @@ https://codepen.io/melnik909/pen/qPjwvq
 /* ----------------Basic section -----------------------------*/
 /* texto de descripcion justificado */
 #about p {
-  text-align: justify;
+  text-align: left;
 }
 #basic h2 {
   color: var(--main-color);
@@ -113,7 +113,7 @@ https://codepen.io/melnik909/pen/qPjwvq
   flex: 1;
 }
 /* para pantallas mas pequeñas la informacion personal y los datos estaran uno debajo de otro */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1200px) {
   #basic > div {
     flex: 100%;
   }
@@ -270,5 +270,27 @@ le damos un  Z index para que vayan tanto la imagen como la descripcion por enci
   }
   to {
     transform: scale(1.02);
+  }
+}
+
+/* Changes to make it more responsive */
+
+@media screen and (max-width: 700px) {
+  .language {
+    padding: 0px 10px;
+    flex-direction: column;
+  }
+
+  #languages img {
+    width: 40%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .language .language-image {
+    text-align: center;
+  }
+
+  .language .language-description::before {
+    display: none;
   }
 }
