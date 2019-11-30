@@ -9,45 +9,63 @@
       src="https://kit.fontawesome.com/982d45a909.js"
       crossorigin="anonymous"
     ></script>
+
+
+    <link rel="stylesheet" href="backGround.css" />
+    <link rel="stylesheet" href="typo.css" />
+
     <link rel="stylesheet" href="style.css" />
 
     <title>John Hernandez</title>
   </head>
 
   <body>
-    <!-- agregamos una imagen de fondo -->
-    <div id="back-image"></div>
+    <section class="background-section">
+      <div class="bgPulse">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div id="typo">
+        <div id="profileRedes">
+          <img src="img/profile3.jpg" alt="" id="profile" />
+          <!-- algunas redes sociales en una misma fila -->
+          <div id="redes">
+            <div class="red">
+              <a href=""><img src="./img/icons/facebook.png" alt=""/></a>
+            </div>
+            <div class="red">
+              <a href=""><img src="./img/icons/whatsapp.png" alt=""/></a>
+            </div>
+            <div class="red">
+              <a href=""><img src="./img/icons/instagram.png" alt=""/></a>
+            </div>
+          </div>
+        </div>
+        <div id="j">
+          <p>J</p>
+        </div>
+        <div id="names">
+          <p>OHN</p>
+          <p>AVIER</p>
+        </div>
+      </div>
+    </section>
     <!-- la hoja de vida estara dentro de un div con id hv, y con efectos de una carta -->
     <div id="hv" class="card">
       <!-- Header con una imagen. nombre y carrera -->
       <div></div>
       <hr />
-      <header>
-        <div class="hgroup">
-          <h3>SALUDOS!!!!</h3>
-          <H1>Soy JOHN</H1>
-          <h3>Ingeniero de Sistemas e Industrial</h3>
-          <!-- algunas redes sociales en una misma fila -->
-          <div id="redes">
-            <div class="red">
-              <a href=""><img src="/img/icons/facebook.png" alt=""/></a>
-            </div>
-            <div class="red">
-              <a href=""><img src="/img/icons/whatsapp.png" alt=""/></a>
-            </div>
-            <div class="red">
-              <a href=""><img src="/img/icons/instagram.png" alt=""/></a>
-            </div>
-          </div>
-        </div>
-        <!-- div que contendra las flechas de font-awesome -->
-        <div id="arrows">
-          <i class="fas fa-arrow-right"></i>
-          <i class="fas fa-arrow-right"></i>
-        </div>
-        <!-- div con imagen de fondo, podria tambien usarse una imagen dentro de un div -->
-        <div id="imagen-perfil"></div>
-      </header>
+
+
       <!-- dos bloques de informacion basica con su titulo y elementos de descripcion -->
       <div id="basic" class="card">
         <div id="about">
@@ -96,7 +114,7 @@
         <!-- usaremos clases para definir solo una vez los estilos de todos los lenguajes -->
         <div class="language">
           <div class="language-image">
-            <img src="img/icons/cpp.png" alt="cpp" />
+            <img src="img/icons/cpp.png" alt="cpp" class="request-loader" />
           </div>
           <div class="language-description">
             <p>

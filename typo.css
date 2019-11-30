@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Baskervville&display=swap");
+
+#typo {
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 240px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: show 7s;
+  font-family: "Baskervville", serif;
+  color: #1a237e;
+}
+
+#j {
+  font-size: 12rem;
+  animation: showJ 5s;
+}
+
+#names {
+  font-size: 3.3rem;
+  animation: animateNames 8s;
+  margin-left: -10px;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes showJ {
+  0% {
+    transform: translateX(-1000px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(360deg);
+  }
+}
+
+@keyframes animateNames {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
